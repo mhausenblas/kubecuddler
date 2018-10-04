@@ -62,7 +62,7 @@ func shellout(withstderr, verbose bool, cmd string, args ...string) (result stri
 // pinfo writes msg in light blue to stdout
 // see also https://misc.flogisoft.com/bash/tip_colors_and_formatting
 func pinfo(msg string) {
-	_, _ = fmt.Fprintf(os.Stdout, "%v: \x1b[94m%v\x1b[0m\n", msg)
+	_, _ = fmt.Fprintf(os.Stdout, "\x1b[94m%v\x1b[0m\n", msg)
 }
 
 // perr writes message and error in light red to stderr
