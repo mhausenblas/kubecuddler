@@ -50,9 +50,6 @@ func shellout(withstderr, verbose bool, cmd string, args ...string) (result stri
 	c.Stdout = &out
 	err = c.Run()
 	if err != nil {
-		if verbose {
-			perr("Something went wrong when shelling out", err)
-		}
 		return "", err
 	}
 	result = strings.TrimSpace(out.String())
